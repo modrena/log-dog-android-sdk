@@ -1,9 +1,8 @@
+![LogDog Feature Graphic](feature-graphic.png)
+
 # LogDog for Android
 
 LogDog is a powerful logging and monitoring SDK for Android applications that helps you track network requests, events, logs, and analytics in real-time.
-
-[![Maven Central](https://img.shields.io/maven-central/v/com.modrena/logdog.svg)](https://search.maven.org/artifact/com.modrena/logdog)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 ## Documentation
 
