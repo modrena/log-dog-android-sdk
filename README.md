@@ -67,8 +67,8 @@ class MyApplication : Application() {
             context = this,
             apiKey = "YOUR_API_KEY",
             config = LogDogConfig(
-                interceptNetwork = true,
-                logLevel = LogLevel.DEBUG
+                logs = true,
+                network = true
             )
         )
     }
