@@ -46,11 +46,11 @@ Add the LogDog dependency to your app's `build.gradle` (module) file:
 
 ```gradle
 plugins {
-    id("com.modrena.logdog.plugin") version "1.0.X" // Dont forget to set the desired version
+    id("com.modrena.logdog.plugin") version "" // Dont forget to set the desired version
 }
 
 dependencies {
-    implementation("com.modrena.logdog:logdog-sdk:1.0.X") // Dont forget to set the desired version
+    implementation("com.modrena.logdog:logdog-sdk:") // Dont forget to set the desired version
 }
 ```
 
@@ -59,18 +59,16 @@ dependencies {
 1. Initialize LogDog in your Application class:
 
 ```kotlin
+
+import com.modrena.logdog.LogDog
+import com.modrena.logdog.LogDogConfig
+
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        
-        LogDog.setup(
-            context = this,
-            apiKey = "YOUR_API_KEY",
-            config = LogDogConfig(
-                logs = true,
-                network = true
-            )
-        )
+        val config = LogDogConfig(logs = true, network = true, events = true)
+        LogDog.initialize(this, "YOUR_API_KEY", config)
+        LogDog.i("LogDog","Hello from LogDog!")
     }
 }
 ```
@@ -99,5 +97,5 @@ val config = LogDogConfig(
     logLevel = LogLevel.DEBUG,
 )
 
-LogDog.setup(this, "YOUR_API_KEY", config)
+LogDog.initialize(this, "YOUR_API_KEY", config)
 ```
