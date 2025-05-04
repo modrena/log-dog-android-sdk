@@ -46,11 +46,11 @@ Add the LogDog dependency to your app's `build.gradle` (module) file:
 
 ```gradle
 plugins {
-    id("com.modrena.logdog.plugin") version "" // Dont forget to set the desired version
+    id("com.modrena.logdog.plugin") version "1.0.41" // Dont forget to set the desired version
 }
 
 dependencies {
-    implementation("com.modrena.logdog:logdog-sdk:") // Dont forget to set the desired version
+    implementation("com.modrena.logdog:logdog-sdk:1.0.41") // Dont forget to set the desired version
 }
 ```
 
