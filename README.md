@@ -1,6 +1,6 @@
 ![LogDog Feature Graphic](feature-graphic.png)
 
-# LogDog for Android (Version: 1.0.60)
+# LogDog for Android (Version: 1.0.61)
 
 LogDog is a powerful logging and monitoring SDK for Android applications that helps you track network requests, events, logs, and analytics in real-time.
 
@@ -46,11 +46,11 @@ Add the LogDog dependency to your app's `build.gradle` (module) file:
 
 ```gradle
 plugins {
-    id("com.modrena.logdog.plugin") version "1.0.60" // Dont forget to set the desired version
+    id("com.modrena.logdog.plugin") version "1.0.61" // Dont forget to set the desired version
 }
 
 dependencies {
-    implementation("com.modrena.logdog:logdog-sdk:1.0.60") // Dont forget to set the desired version
+    implementation("com.modrena.logdog:logdog-sdk:1.0.61") // Dont forget to set the desired version
 }
 ```
 
@@ -67,7 +67,7 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         LogDog.initialize(this) // Needs to be in the onCreate()
-        val config = LogDogConfig(apiKey:"YOUR_API_KEY",logs = true, network = true, events = true)
+        val config = LogDogConfig(apiKey = "YOUR_API_KEY",logs = true, network = true, events = true)
         LogDog.start(config)
         LogDog.i("LogDog","Hello from LogDog!")
     }
